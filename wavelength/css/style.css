@@ -1,0 +1,256 @@
+:root { 
+    --page-bg: #f5f3ff; 
+    --text-color: #1e1b4b; 
+    --header-bg: #312e81; 
+    --header-text: #ffffff; 
+    --nav-link: #ddd6fe; 
+    --panel-bg: #ffffff; 
+    --button-bg: #7c3aed; 
+    --button-hover: #6d28d9; 
+    --secondary-bg: #64748b; 
+    --danger-bg: #dc2626; 
+    --table-head: #ede9fe; 
+    --border-color: #c4b5fd; 
+    --muted-text: #6b7280; 
+    --alert-info-bg: #e0e7ff; 
+    --alert-info-text: #312e81; 
+    --alert-error-bg: #fee2e2; 
+    --alert-error-text: #991b1b; 
+    --alert-success-bg: #dcfce7; 
+    --alert-success-text: #166534; 
+} 
+ 
+* { 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background: var(--page-bg); 
+    color: var(--text-color); 
+} 
+ 
+.container { 
+    width: min(1100px, 92%); 
+    margin: auto; 
+} 
+ 
+.site-header { 
+    background: var(--header-bg); 
+    color: var(--header-text); 
+    padding: 18px 0; 
+} 
+ 
+.nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 20px; 
+} 
+ 
+.logo { 
+    color: var(--header-text); 
+    text-decoration: none; 
+    font-size: 24px; 
+    font-weight: bold; 
+} 
+ 
+nav { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 14px; 
+} 
+ 
+nav a { 
+    color: var(--nav-link); 
+    text-decoration: none; 
+} 
+ 
+nav a:hover { 
+    color: white; 
+} 
+ 
+main.container { 
+    padding: 30px 0 50px; 
+} 
+ 
+h1 { 
+    margin-top: 0; 
+} 
+ 
+.stats { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); 
+    gap: 16px; 
+    margin-bottom: 20px; 
+} 
+ 
+.grid-two { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 16px; 
+} 
+ 
+.card, 
+.form-card, 
+.filters { 
+    background: var(--panel-bg); 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 8px rgba(49, 46, 129, .10); 
+} 
+ 
+.stats .card p { 
+    font-size: 28px; 
+    font-weight: bold; 
+    margin-bottom: 0; 
+} 
+ 
+.filters { 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: end; 
+    gap: 15px; 
+} 
+ 
+.filters label, 
+.form-card label { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 7px; 
+    font-weight: bold; 
+} 
+ 
+input, 
+select { 
+    padding: 10px; 
+    border: 1px solid var(--border-color); 
+    border-radius: 6px; 
+    min-width: 180px; 
+} 
+ 
+fieldset { 
+    border: 0; 
+    padding: 0; 
+    margin: 0; 
+} 
+ 
+.checkbox { 
+    display: inline-block !important; 
+    margin-right: 10px; 
+    font-weight: normal !important; 
+} 
+ 
+.checkbox input { 
+    min-width: auto; 
+} 
+ 
+.button { 
+    display: inline-block; 
+    border: 0; 
+    border-radius: 6px; 
+    background: var(--button-bg); 
+    color: white; 
+    padding: 10px 15px; 
+    text-decoration: none; 
+    cursor: pointer; 
+} 
+ 
+.button:hover { 
+    background: var(--button-hover); 
+} 
+ 
+.button.secondary { 
+    background: var(--secondary-bg); 
+} 
+ 
+.button.danger { 
+    background: var(--danger-bg); 
+} 
+ 
+.quick-links { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+} 
+ 
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: white; 
+    margin-bottom: 20px; 
+} 
+ 
+th, 
+td { 
+    padding: 12px; 
+    border-bottom: 1px solid var(--border-color); 
+    text-align: left; 
+} 
+ 
+th { 
+    background: var(--table-head); 
+} 
+ 
+.actions { 
+    display: flex; 
+    gap: 10px; 
+} 
+ 
+.actions a { 
+    text-decoration: none; 
+} 
+ 
+.alert { 
+    padding: 14px; 
+    border-radius: 7px; 
+    background: var(--alert-info-bg); 
+    color: var(--alert-info-text); 
+    margin-bottom: 20px; 
+} 
+ 
+.alert.error { 
+    background: var(--alert-error-bg); 
+    color: var(--alert-error-text); 
+} 
+ 
+.alert.success { 
+    background: var(--alert-success-bg); 
+    color: var(--alert-success-text); 
+} 
+ 
+.empty { 
+    color: var(--muted-text); 
+} 
+ 
+.form-card { 
+    max-width: 650px; 
+} 
+ 
+.form-card label { 
+    margin-bottom: 15px; 
+} 
+ 
+.site-footer { 
+    padding: 25px 0; 
+    background: var(--header-bg); 
+    color: var(--header-text); 
+} 
+ 
+@media (max-width: 700px) { 
+    .nav, 
+    .grid-two { 
+        display: block; 
+    } 
+ 
+    nav { 
+        margin-top: 15px; 
+    } 
+ 
+    table { 
+        display: block; 
+        overflow-x: auto; 
+    } 
+}
